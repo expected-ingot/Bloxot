@@ -1,54 +1,7 @@
 -- Bloxot 
 -- Made by Teala24k#1413. Developed for Blockate
 function Place(Coords, Reflectance, CanCollide, Color, LightColor, Transparency, Light, MaterialID, ShapeID, SizeID)
-    local args = {
-        [1] = Coords,
-        [2] = {
-            ["Reflectance"] = Reflectance,
-            ["CanCollide"] = CanCollide,
-            ["Color"] = Color --[[Color3]],
-            ["LightColor"] = LightColor --[[Color3]],
-            ["Transparency"] = Transparency,
-            ["Light"] = Light,
-            ["Material"] = {
-                [1] = MaterialID,
-                [2] = 1,
-                [3] = 1,
-                [4] = 1,
-                [5] = 1,
-                [6] = 1,
-                [7] = 1,
-                [8] = 1,
-                [9] = 1,
-                [10] = 1
-            },
-            ["Shape"] = {
-                [1] = ShapeID,
-                [2] = 1,
-                [3] = 1,
-                [4] = 1,
-                [5] = 1,
-                [6] = 1,
-                [7] = 1,
-                [8] = 1,
-                [9] = 1,
-                [10] = 1
-            },
-            ["Size"] = {
-                [1] = SizeID,
-                [2] = 1,
-                [3] = 1,
-                [4] = 1,
-                [5] = 1,
-                [6] = 1,
-                [7] = 1,
-                [8] = 1,
-                [9] = 1,
-                [10] = 1
-            }
-        }
-    }
-
+    local args = { [1] = Coords, [2] = { ["Reflectance"] = Reflectance, ["CanCollide"] = CanCollide, ["Color"] = Color --[[Color3]], ["LightColor"] = LightColor --[[Color3]], ["Transparency"] = Transparency, ["Light"] = Light, ["Material"] = { [1] = MaterialID, [2] = 1, [3] = 1, [4] = 1, [5] = 1, [6] = 1, [7] = 1, [8] = 1, [9] = 1, [10] = 1 }, ["Shape"] = { [1] = ShapeID, [2] = 1, [3] = 1, [4] = 1, [5] = 1, [6] = 1, [7] = 1, [8] = 1, [9] = 1, [10] = 1 }, ["Size"] = { [1] = SizeID, [2] = 1, [3] = 1, [4] = 1, [5] = 1, [6] = 1, [7] = 1, [8] = 1, [9] = 1, [10] = 1 } } }
     game:GetService("ReplicatedStorage").Sockets.Edit.Place:InvokeServer(unpack(args))
     return true
 end
